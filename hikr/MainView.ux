@@ -1,8 +1,8 @@
 <App>
 	<ClientPanel>
-			<PageControl>
-					<HomePage />
-					<EditHikePage />
-			</PageControl>
+			<Navigator>
+					<HomePage ux:Template="home" />
+					<EditHikePage ux:Template="editHike" />
+			</Navigator>
 	</ClientPanel>
 </App>
