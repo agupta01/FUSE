@@ -1,44 +1,8 @@
 <App>
 	<ClientPanel>
-
-		<JavaScript>
-				var Observable = require("FuseJS/Observable");
-				var hikes = require("hikes");
-
-				var hike = Observable();
-
-				var name = hike.map(function(x) {return x.name; });
-				var location = hike.map(function(x) {return x.location; });
-				var distance = hike.map(function(x) {return x.distance; });
-				var rating = hike.map(function(x) {return x.rating; });
-				var comments = hike.map(function(x) {return x.comments; });
-
-				function chooseHike(arg) {
-						hike.value = arg.data;
-				}
-
-
-		</JavaScript>
-
-		<ScrollView>
-			<StackPanel>
-					<Each Items="{hikes}">
-							<Button Text="{name}" Clicked="{chooseHike}"/>
-					</Each>
-
-					<Text>Name:</Text>
-					<TextBox Value="{name}" />
-
-					<Text>Location:</Text>
-					<TextBox Value="{location}" InputHint="Decimal"/>
-
-					<Text>Distance:</Text>
-					<TextBox Value="{distance}" InputHint="Integer"/>
-
-					<Text>Comments:</Text>
-					<TextBox Value="{comments}" />
-
-			</StackPanel>
-		</ScrollView>
+			<PageControl>
+					<HomePage />
+					<EditHikePage />
+			</PageControl>
 	</ClientPanel>
 </App>

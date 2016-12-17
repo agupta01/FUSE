@@ -1,0 +1,22 @@
+<Page ux:Class="EditHikePage">
+
+    <JavaScript File="EditHikePage.js" />
+
+    <ScrollView>
+        <StackPanel>
+
+            <Text>Name:</Text>
+            <TextBox Value="{name}" />
+
+            <Text>Location:</Text>
+            <TextBox Value="{location}" InputHint="Decimal"/>
+
+            <Text>Distance:</Text>
+            <TextBox Value="{distance}" InputHint="Integer"/>
+
+            <Text>Comments:</Text>
+            <TextBox Value="{comments}" />
+
+        </StackPanel>
+    </ScrollView>
+</Page>
